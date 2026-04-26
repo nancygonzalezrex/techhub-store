@@ -1,0 +1,174 @@
+body {
+    background-color: #f4f6f9;
+    font-family: Arial, sans-serif;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.hero {
+    background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+    color: white;
+    padding: 45px 20px;
+    border-radius: 18px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.3rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+.card-producto {
+    border: none;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+    height: 100%;
+}
+
+.card-producto:hover {
+    transform: translateY(-5px);
+}
+
+.precio {
+    font-size: 1.2rem;
+    color: #0d6efd;
+}
+
+.busqueda {
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+.acciones-superiores {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 1.7rem;
+    }
+
+    .hero {
+        padding: 30px 15px;
+    }
+
+    .acciones-superiores a {
+        width: 100%;
+    }
+}
+
+/* RESPONSIVE - MOBILE FIRST */
+
+
+/* Celulares pequeños */
+@media (max-width: 576px) {
+
+    body {
+        font-size: 15px;
+    }
+
+    .navbar .container {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .navbar-brand {
+        font-size: 1.3rem;
+    }
+
+    .hero {
+        padding: 25px 15px;
+        border-radius: 12px;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+
+    .acciones-superiores {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .acciones-superiores a,
+    .acciones-superiores span {
+        width: 100%;
+        text-align: center;
+    }
+
+    .busqueda {
+        width: 100%;
+    }
+
+    .card-producto {
+        margin-bottom: 15px;
+    }
+
+    .card-producto .btn {
+        width: 100%;
+    }
+
+    footer {
+        font-size: 0.85rem;
+        padding: 15px;
+    }
+}
+
+/* Tablets */
+@media (min-width: 577px) and (max-width: 992px) {
+
+    .hero h1 {
+        font-size: 1.9rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .acciones-superiores {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .card-producto {
+        min-height: 230px;
+    }
+}
+
+/* Escritorio */
+@media (min-width: 993px) {
+
+    .card-producto {
+        min-height: 260px;
+    }
+
+    .hero {
+        padding: 50px 25px;
+    }
+}
