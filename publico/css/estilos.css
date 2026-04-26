@@ -1,7 +1,3 @@
-/* ========================= */
-/* TECHHUB STORE - UI PREMIUM */
-/* ========================= */
-
 :root {
     --color-principal: #2563eb;
     --color-secundario: #0f172a;
@@ -18,9 +14,7 @@ body {
     color: var(--color-texto);
 }
 
-/* ========================= */
 /* NAVBAR */
-/* ========================= */
 
 .navbar {
     box-shadow: 0 6px 20px rgba(15, 23, 42, 0.15);
@@ -32,9 +26,7 @@ body {
     font-size: 1.3rem;
 }
 
-/* ========================= */
 /* HERO */
-/* ========================= */
 
 .hero {
     background: linear-gradient(135deg, #0f172a, #2563eb, #38bdf8);
@@ -87,9 +79,7 @@ body {
     opacity: 0.95;
 }
 
-/* ========================= */
 /* BUSCADOR */
-/* ========================= */
 
 .busqueda {
     max-width: 650px;
@@ -103,9 +93,7 @@ body {
     box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
 }
 
-/* ========================= */
 /* BOTONES SUPERIORES */
-/* ========================= */
 
 .acciones-superiores {
     display: flex;
@@ -116,6 +104,7 @@ body {
 }
 
 /* Botones del menú */
+
 .acciones-superiores .btn-info,
 .acciones-superiores .btn-danger,
 .acciones-superiores .btn-secondary,
@@ -125,6 +114,7 @@ body {
 }
 
 /* Hover menú */
+
 .acciones-superiores .btn-info:hover,
 .acciones-superiores .btn-danger:hover,
 .acciones-superiores .btn-secondary:hover,
@@ -134,13 +124,12 @@ body {
 }
 
 /* Bienvenida */
+
 .acciones-superiores .btn-light {
     color: black !important;
 }
 
-/* ========================= */
 /* CARDS PRODUCTOS */
-/* ========================= */
 
 .card-producto {
     border: none;
@@ -186,9 +175,7 @@ body {
     margin-bottom: 18px;
 }
 
-/* ========================= */
 /* BOTONES GENERALES */
-/* ========================= */
 
 .btn {
     border-radius: 12px;
@@ -253,17 +240,13 @@ body {
     color: black;
 }
 
-/* ========================= */
 /* FORMULARIOS */
-/* ========================= */
 
 .card {
     border-radius: 20px;
 }
 
-/* ========================= */
 /* TABLAS */
-/* ========================= */
 
 .table-responsive {
     border-radius: 18px;
@@ -275,9 +258,7 @@ body {
     margin-bottom: 0;
 }
 
-/* ========================= */
 /* FOOTER */
-/* ========================= */
 
 footer {
     margin-top: 60px;
@@ -286,9 +267,7 @@ footer {
     color: var(--color-suave);
 }
 
-/* ========================= */
 /* RESPONSIVE */
-/* ========================= */
 
 @media (max-width: 576px) {
     body {
