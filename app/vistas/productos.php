@@ -20,12 +20,13 @@
         </a>
 
         <div class="d-flex gap-2">
-            <a href="/techhub_store/publico/ver_carrito.php" class="btn btn-outline-light btn-sm">
-                Carrito
-                <span class="badge bg-primary">
-                    <?php echo isset($_SESSION['carrito']) ? count($_SESSION['carrito']) : 0; ?>
-                </span>
-            </a>
+           <a href="/techhub_store/publico/ver_carrito.php" class="btn-carrito">
+    <span class="icono-carrito">🛒</span>
+    <span>Carrito</span>
+    <span class="contador-carrito">
+        <?php echo isset($_SESSION['carrito']) ? count($_SESSION['carrito']) : 0; ?>
+    </span>
+</a>
         </div>
     </div>
 </nav>
