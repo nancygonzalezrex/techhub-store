@@ -39,26 +39,61 @@ if ($_POST) {
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Iniciar sesión</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión - TechHub Store</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/techhub_store/publico/css/estilos.css">
 </head>
+
 <body>
 
 <div class="container mt-5">
-    <h1>Iniciar sesión</h1>
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-6 col-lg-4">
 
-    <?php if ($mensaje != "") { ?>
-        <div class="alert alert-danger"><?php echo $mensaje; ?></div>
-    <?php } ?>
+            <div class="card shadow-sm border-0 p-4">
+                <h1 class="text-center mb-4">Iniciar sesión</h1>
 
-    <form method="POST">
-        <input type="email" name="email" class="form-control mb-3" placeholder="Correo" required>
+                <?php if ($mensaje != "") { ?>
+                    <div class="alert alert-danger">
+                        <?php echo $mensaje; ?>
+                    </div>
+                <?php } ?>
 
-        <input type="password" name="password" class="form-control mb-3" placeholder="Contraseña" required>
+                <form method="POST">
+                    <input 
+                        type="email" 
+                        name="email" 
+                        class="form-control mb-3" 
+                        placeholder="Correo" 
+                        required
+                    >
 
-        <button class="btn btn-primary">Ingresar</button>
-        <a href="registro.php" class="btn btn-link">Crear cuenta</a>
-    </form>
+                    <input 
+                        type="password" 
+                        name="password" 
+                        class="form-control mb-3" 
+                        placeholder="Contraseña" 
+                        required
+                    >
+
+                    <button class="btn btn-primary w-100 mb-2">
+                        Ingresar
+                    </button>
+
+                    <a href="registro.php" class="btn btn-link w-100">
+                        Crear cuenta
+                    </a>
+
+                    <a href="index.php" class="btn btn-secondary w-100">
+                        Volver al catálogo
+                    </a>
+                </form>
+            </div>
+
+        </div>
+    </div>
 </div>
 
 </body>

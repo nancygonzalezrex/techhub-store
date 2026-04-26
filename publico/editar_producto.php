@@ -49,56 +49,68 @@ $producto = $productoModelo->obtenerProductoPorId($id);
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Editar producto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar producto - TechHub Store</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/techhub_store/publico/css/estilos.css">
 </head>
 
 <body>
 
-<div class="container mt-4">
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-7 col-lg-5">
 
-    <h1 class="text-center mb-4">Editar producto</h1>
+            <div class="card shadow-sm border-0 p-4">
 
-    <?php if ($mensaje != "") { ?>
-        <div class="alert alert-danger">
-            <?php echo $mensaje; ?>
+                <h1 class="text-center mb-4">Editar producto</h1>
+
+                <?php if ($mensaje != "") { ?>
+                    <div class="alert alert-danger">
+                        <?php echo $mensaje; ?>
+                    </div>
+                <?php } ?>
+
+                <form method="POST">
+
+                    <input 
+                        type="text"
+                        name="nombre"
+                        class="form-control mb-3"
+                        value="<?php echo $producto['nombre']; ?>"
+                        required
+                    >
+
+                    <textarea 
+                        name="descripcion"
+                        class="form-control mb-3"
+                        rows="4"
+                        required
+                    ><?php echo $producto['descripcion']; ?></textarea>
+
+                    <input 
+                        type="number"
+                        name="precio"
+                        class="form-control mb-3"
+                        value="<?php echo $producto['precio']; ?>"
+                        required
+                    >
+
+                    <button class="btn btn-warning w-100 mb-2">
+                        Guardar cambios
+                    </button>
+
+                    <a href="admin.php" class="btn btn-secondary w-100">
+                        Cancelar
+                    </a>
+
+                </form>
+
+            </div>
+
         </div>
-    <?php } ?>
-
-    <form method="POST">
-
-        <input 
-            type="text"
-            name="nombre"
-            class="form-control mb-3"
-            value="<?php echo $producto['nombre']; ?>"
-            required
-        >
-
-        <textarea 
-            name="descripcion"
-            class="form-control mb-3"
-            required
-        ><?php echo $producto['descripcion']; ?></textarea>
-
-        <input 
-            type="number"
-            name="precio"
-            class="form-control mb-3"
-            value="<?php echo $producto['precio']; ?>"
-            required
-        >
-
-        <button class="btn btn-warning">
-            Guardar cambios
-        </button>
-
-        <a href="admin.php" class="btn btn-secondary">
-            Cancelar
-        </a>
-
-    </form>
-
+    </div>
 </div>
 
 </body>

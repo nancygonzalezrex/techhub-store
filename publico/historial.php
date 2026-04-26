@@ -16,8 +16,11 @@ $ordenes = $ordenModelo->obtenerHistorial($_SESSION['usuario']['id']);
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Historial de compras</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de compras - TechHub Store</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/techhub_store/publico/css/estilos.css">
 </head>
 
 <body>
@@ -26,11 +29,15 @@ $ordenes = $ordenModelo->obtenerHistorial($_SESSION['usuario']['id']);
 
     <h1 class="text-center mb-4">Historial de compras</h1>
 
-    <a href="index.php" class="btn btn-secondary mb-3">Volver al catálogo</a>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-center mb-4">
+        <a href="index.php" class="btn btn-secondary">
+            Volver al catálogo
+        </a>
+    </div>
 
     <?php if ($ordenes->num_rows == 0) { ?>
 
-        <div class="alert alert-warning">
+        <div class="alert alert-warning text-center">
             No tienes compras registradas.
         </div>
 
@@ -38,25 +45,38 @@ $ordenes = $ordenModelo->obtenerHistorial($_SESSION['usuario']['id']);
 
         <?php while ($orden = $ordenes->fetch_assoc()) { ?>
 
-            <div class="card mb-3">
-                <div class="card-header">
-                    Compra #<?php echo $orden['id']; ?> |
-                    Fecha: <?php echo $orden['fecha']; ?> |
-                    Total: $<?php echo $orden['total']; ?>
+            <div class="card shadow-sm border-0 mb-4">
+                <div class="card-header bg-dark text-white">
+                    <div class="row text-center text-md-start">
+                        <div class="col-12 col-md-4 mb-2 mb-md-0">
+                            <strong>Compra #<?php echo $orden['id']; ?></strong>
+                        </div>
+
+                        <div class="col-12 col-md-4 mb-2 mb-md-0">
+                            Fecha: <?php echo $orden['fecha']; ?>
+                        </div>
+
+                        <div class="col-12 col-md-4">
+                            Total: $<?php echo $orden['total']; ?>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="card-body">
-                    <h5>Productos:</h5>
+                    <h5 class="mb-3">Productos:</h5>
 
-                    <ul>
+                    <ul class="list-group">
                         <?php
                         $detalles = $ordenModelo->obtenerDetalle($orden['id']);
+
                         while ($detalle = $detalles->fetch_assoc()) {
                         ?>
-                           <li>
-                            <strong><?php echo $detalle['nombre_producto']; ?></strong><br>
-                            <?php echo $detalle['descripcion']; ?><br>
-                            $<?php echo $detalle['precio']; ?>
+                            <li class="list-group-item">
+                                <strong><?php echo $detalle['nombre_producto']; ?></strong><br>
+                                <span class="text-muted">
+                                    <?php echo $detalle['descripcion']; ?>
+                                </span><br>
+                                <strong>$<?php echo $detalle['precio']; ?></strong>
                             </li>
                         <?php } ?>
                     </ul>
