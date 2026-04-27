@@ -10,17 +10,11 @@ El sistema permite navegar un catálogo dinámico, buscar productos sin recargar
 
 ## 🌐 URL del Proyecto Online
 
-```text
-https://techhubnancy.kesug.com/techhub_store/publico/
-```
+[🔗 Ver Proyecto Online](https://techhubnancy.kesug.com/techhub_store/publico/)
 
 ## 📁 Repositorio GitHub
 
-```text
-https://github.com/nancygonzalezrex/techhub-store
-```
-
----
+## [💻 Ver Repositorio en GitHub](https://github.com/nancygonzalezrex/techhub-store)
 
 ## 🧰 Tecnologías Utilizadas
 
